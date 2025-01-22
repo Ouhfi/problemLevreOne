@@ -1,0 +1,19 @@
+# تعريف المترجم
+CXX = g++
+
+# تعريف خيارات المترجم
+CXXFLAGS = -std=c++11 -Wall
+
+# تعريف اسم الملف التنفيذي الناتج
+TARGET = program
+
+# تعريف ملفات الشيفرة المصدرية
+SRCS = ValidateNumberInRange.cpp
+
+# القاعدة الرئيسية لبناء الملف التنفيذي
+$(TARGET): $(SRCS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRCS)
+
+# قاعدة لتنظيف الملفات الناتجة
+clean:
+	rm -f $(TARGET)
